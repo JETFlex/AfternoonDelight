@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TextInput, Text, Button, ListView, AsyncStorage } from 'react-native';
+import { KeyboardAvoidingView, View, TextInput, Text, Button, ListView, AsyncStorage } from 'react-native';
 import { loginUser } from '../../actions/session_actions';
 import { Actions } from 'react-native-router-flux';
 
@@ -120,11 +120,12 @@ export default class SignUpForm extends Component {
 
   render() {
     return (
-      <View style={{
+      <KeyboardAvoidingView behavior="padding" style={{
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: "#8abcdf",
+        paddingTop: 30,
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').height
       }}
@@ -135,7 +136,7 @@ export default class SignUpForm extends Component {
             backgroundColor: "white",
             width: 300,
             height: 50,
-            marginBottom: 20
+            marginBottom: 10
           }}>
           <TextInput
             style={{
@@ -157,7 +158,7 @@ export default class SignUpForm extends Component {
             backgroundColor: "white",
             width: 300,
             height: 50,
-            marginBottom: 20
+            marginBottom: 10
           }}>
           <TextInput
             style={{
@@ -179,7 +180,7 @@ export default class SignUpForm extends Component {
             backgroundColor: "white",
             width: 300,
             height: 50,
-            marginBottom: 20
+            marginBottom: 10
           }}>
           <TextInput
             style={{
@@ -202,7 +203,7 @@ export default class SignUpForm extends Component {
             backgroundColor: "white",
             width: 300,
             height: 50,
-            marginBottom: 20
+            marginBottom: 10
           }}>
           <TextInput
             style={{
@@ -225,7 +226,7 @@ export default class SignUpForm extends Component {
             backgroundColor: "white",
             width: 300,
             height: 50,
-            marginBottom: 20
+            marginBottom: 10
           }}>
           <TextInput
             style={{
@@ -242,7 +243,7 @@ export default class SignUpForm extends Component {
         </View>
 
         <View
-          style={{ backgroundColor: 'white', width: 150, marginBottom: 20 }}>
+          style={{ backgroundColor: 'white', width: 150, marginBottom: 5 }}>
           <Button
             color='#8abcdf'
             title="Register"
@@ -251,7 +252,7 @@ export default class SignUpForm extends Component {
           </Button>
         </View>
         {this.renderErrors()}
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }

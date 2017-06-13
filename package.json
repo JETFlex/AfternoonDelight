@@ -1,0 +1,29 @@
+{
+  "name": "LunchWithStrangers",
+  "version": "1.0.0",
+  "description": "Finding new people around you to discuss similar interests can be difficult. AfternoonDelight allows users to discover new places and new people with similar interests in their area. Users will be able to find people based on location, search by category, and schedule a meet up with chat functionality.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "engines": {
+    "node": "4.1.1",
+    "npm": "3.10.10"
+  },
+  "scripts": {
+    "postinstall": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JETFlex/LunchWithStrangers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JETFlex/LunchWithStrangers/issues"
+  },
+  "homepage": "https://github.com/JETFlex/LunchWithStrangers#readme"
+}

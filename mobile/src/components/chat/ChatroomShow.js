@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Dimensions } from 'react-native';
+import { Text, KeyboardAvoidingView, StyleSheet, Dimensions } from 'react-native';
 import Pusher from 'pusher-js/react-native';
 
 import MessageIndex from './MessageIndexContainer';
@@ -38,10 +38,10 @@ export default class ChatroomShow extends React.Component {
     const chatroomID = this.props.data;
 
     return (
-      <View style={styles.chatContainer}>
+      <KeyboardAvoidingView behavior="padding" style={styles.chatContainer}>
         <MessageIndex messages={messages} />
         <ChatInput chatroomID={chatroomID} />
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }

@@ -16,7 +16,6 @@
 
 ## Implementation
 
-<<<<<<< HEAD
 User's session tokens are stored in AsyncStorage allowing them to persist after app close. When returning to AfternoonDelight the session token is authenticated using a custom route then redirected to the home page. This takes advantage af ES7's new async and await functions.
 
 ```javascript
@@ -32,26 +31,6 @@ async verifyToken(token) {
     } else {
       const error = res;
       throw error;
-=======
-  User's session tokens are stored in AsyncStorage allowing them to persist after app close. When returning to AfternoonDelight the session token is authenticated using a custom route then redirected to the home page. This takes advantage af ES7's new async and await functions.
-
-  ```javascript
-   async verifyToken(token) {
-    const sessionToken = token;
-
-    try {
-      const response = await fetch('https://afternoondelight.herokuapp.com/api/verify?session%5Bsession_token%5D=' + sessionToken);
-      const res = await response.text();
-      if (response.status >= 200 && response.status < 300) {
-        currentUserID = await this.props.storage.getItem('id');
-        Actions.categoriesIndex(currentUserID);
-      } else {
-        const error = res;
-        throw error;
-      }
-    } catch (error) {
-      console.log("Error: " + error);
->>>>>>> 2bc70568e51897ca900e13f86b4b291b5b8d5cc2
     }
   } catch (error) {
     console.log("Error: " + error);
